@@ -22,6 +22,8 @@ using namespace std;
 Popcircle::Popcircle(){}
 Popcircle::Popcircle(const ci::gl::TextureRef &img00, Vec2f Circlepos, cinder::Color ccc): CircleImg (img00)
 {
+    Rand::randomize();
+
     Cpos = Circlepos;
     //using seconds*10 for natural opacity
     lifeSpanTemp= getElapsedSeconds()*10;
@@ -37,7 +39,8 @@ void Popcircle::update()
 {
     //erase after 5.0 sec. -> using 50
     lifeSpan = getElapsedSeconds()*10 - lifeSpanTemp;
-    aa      = Rand::randFloat(10,getWindowHeight()/3);
+    float minCircleSize = lmap(lifeSpan, 0.f, 50.f , 10.f, (float)getWindowHeight()/3-5.f);
+    aa      = Rand::randFloat(minCircleSize,getWindowHeight()/3);
     
     // big circle -> transparent, small circle ->vivid
     oppa    = ci::lmap(aa, 10.f, (float)getWindowHeight()/3, 1.f, 0.2f);

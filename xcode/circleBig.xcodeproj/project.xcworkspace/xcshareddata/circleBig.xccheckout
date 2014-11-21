@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3DE55BA4-7B53-492D-A5A6-6A15F8E16A49</string>
+	<key>IDESourceControlProjectName</key>
+	<string>circleBig</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>96CCA2BA4B82F1A7E8B1A0EBAAD44B8FBBD53724</key>
+		<string>https://github.com/namutree/circleBig.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xcode/circleBig.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>96CCA2BA4B82F1A7E8B1A0EBAAD44B8FBBD53724</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/namutree/circleBig.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>96CCA2BA4B82F1A7E8B1A0EBAAD44B8FBBD53724</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>96CCA2BA4B82F1A7E8B1A0EBAAD44B8FBBD53724</string>
+			<key>IDESourceControlWCCName</key>
+			<string>circleBig</string>
+		</dict>
+	</array>
+</dict>
+</plist>

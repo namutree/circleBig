@@ -21,6 +21,8 @@ class circleBigApp : public AppNative {
     PopcircleCon popCirclepop;
     bool circleBool;
     int CircleOSC[2];
+    float circleLifeSpan01, circleLifeSpan02;
+    int amt;
 };
 
 void circleBigApp::prepareSettings(Settings *settings)
@@ -31,8 +33,10 @@ void circleBigApp::prepareSettings(Settings *settings)
 
 void circleBigApp::setup()
 {
-        popCirclepop.setup();
-        circleBool= false;
+    popCirclepop.setup();
+    circleBool= false;
+    Rand::randomize();
+
 }
 
 void circleBigApp::mouseMove( MouseEvent event )
@@ -44,7 +48,8 @@ void circleBigApp::mouseMove( MouseEvent event )
     CircleOSC[1] = event.getY();
     if(CircleOSC[0]>300 && CircleOSC[1] <= 300){
         circleBool= true;
-    }else circleBool = false;
+        circleLifeSpan01 = getElapsedSeconds()*100;
+    }
 
 }
 
@@ -52,7 +57,14 @@ void circleBigApp::update()
 {
     popCirclepop.update();
     if(circleBool){
-        popCirclepop.addPopCircle();
+        amt = randInt(1,4);
+        circleLifeSpan02 = getElapsedSeconds()*100;
+        float circleInterval = circleLifeSpan02- circleLifeSpan01;
+        if((int)circleInterval%95 <0.5){
+            for(int i=0; i<amt; i++){
+            popCirclepop.addPopCircle();
+            }
+        }
     }
     popCirclepop.removePopCircle();
 }
